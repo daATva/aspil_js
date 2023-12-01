@@ -6,7 +6,7 @@
 
 1. Склонируйте репозиторий с проектом:
    ```
-   git clone https://github.com/daATva/aspil_js
+   git clone https://github.com/daATva/aspil_js.git
    ```
 2. Откройте проект в соответствующей среде разработки или текстовом редакторе.
 
