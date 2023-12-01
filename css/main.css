@@ -1,0 +1,271 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--index: calc(1vw + 1vh);
+	--color-header: #f4efec;
+	--color-text: #cdc6c3;
+	--gallery-gap: calc(var(--index) * 7.5)
+}
+@font-face {
+	font-family: raleway-c;
+	src: url(../fonts/raleway-regular.woff2);
+}
+@font-face {
+	font-family: outfit-c;
+	src: url(../fonts/outfit-regular.woff2);
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: outfit-c;
+}
+/* will-change */
+.content, .hero, .main-header, .gallery > * {
+	will-change: transform;
+}
+body {
+	background-image: url(../img/bg.jpg);
+	background-size: 50px;
+	color: #fafafa;
+	font-family: raleway-c;
+	overflow-x: hidden;
+}
+.hero {
+	width: calc(var(--index) * 65);
+	position: absolute;
+	left: -4vw;
+	top: 15vh;
+	z-index: -1;
+}
+.main-header {
+	height: 100vh;
+}
+.container {
+	padding: 0 7vw;
+}
+.main-title {
+	font-size: calc(var(--index) * 8);
+	position: absolute;
+	width: min-content;
+	bottom: 12vh;
+	line-height: .9;
+}
+.gallery {
+	display: flex;
+	padding: calc(var(--index) * 5) 0;
+}
+.gallery > * {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.gallery__item {
+	max-width: calc(var(--index) * 21);
+	margin-bottom: var(--gallery-gap);
+	max-height: 180vh;
+	border-radius: 20px;
+}
+.gallery__left {
+	margin-top: calc(var(--gallery-gap) * 1.75);
+}
+.gallery__right .gallery__item {
+	margin: 0;
+	margin-top: var(--gallery-gap);
+}
+.text-block {
+	color: var(--color-text);
+	position: relative;
+}
+.text-block__h {
+	font-size: 2rem;
+	line-height: 2.4rem;
+	color: var(--color-header);
+	margin-bottom: 1.5rem;
+}
+.text-block__p {
+	line-height: 1.75;
+}
+.contacts__image__row {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.contacts__image__row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contacts__image {
+	width: 70px;
+	margin: 0px 61px 0px 0px;
+}
+
+.contacts__image:last-child {
+	margin: 0px 0px 0px 0px;
+}
+
+.footer {
+	/* padding: 114px 0px 100px 0px; */
+}
+.footer__container {
+	display: flex;
+	justify-content: center
+}
+.footer__items {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 50px;
+	row-gap: 20px;
+}
+.footer__item {
+}
+
+@media (max-width: 500px){
+	.footer{
+		padding: 30px 0px;
+	}	
+	.footer__items{
+		flex-direction: column;
+	}
+}
+
+.contacts__copyright{
+	padding: 155px 0px 0px 5px;
+	font-family: 'Gilroy Medium';
+	font-size: 18px;
+	line-height: 17px;
+	text-align: center;
+	color: #828282;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	
+}
+.contact__content{
+	margin: 0px 0px 100px 0px;
+}
+
+.image__hover:hover{
+	fill: aqua;
+}
+
+.contacts__image{
+    /* filter: drop-shadow(3px 3px 5px #696969); */
+}
+.contacts__image:active{
+	position: relative;
+	top: 3px;
+	transition: .5s;
+}
+.contacts__image:hover{
+	cursor: pointer;
+	transition: .5s;
+}
+
+.TG:hover{
+	fill: #0088cc;
+}
+
+.VK:hover{
+	fill: #597da3;
+}
+
+.Inst:hover{
+	fill: #e4405f;
+}
+/*
+____________________////////////////////_______________
+*/
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+form label {
+	margin-bottom: 10px;
+	font-size: 1rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select,
+form textarea {
+	margin-bottom: 15px;
+	padding: 10px;
+	font-size: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+form input[type="submit"] {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	background-color: #000;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+	background-color: #333;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+a:hover {
+	color: #333;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	background-color: #000;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+	background-color: #333;
+}
+
+img:hover {
+    /* border: 3px solid #413f3f; */
+    filter: grayscale(1); /* Черно-белый фильтр для изображения */
+
+}
+
+
+.gallery__item {
+    transition: 1s; /* Время изменения цвета изображения */
+	display: block; 
+}
+.gallery__item:hover {
+    /* filter: grayscale(0); Цветное изображение при наведении */
+	transform: scale(1.2);
+}
+
+
